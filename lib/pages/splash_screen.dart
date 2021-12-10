@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:papa_kost/pages/home_page.dart';
 import 'package:papa_kost/theme.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -55,7 +56,14 @@ class SplashScreen extends StatelessWidget {
                 borderRadius: BorderRadius.circular(17),
               ),
             ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => homepage(),
+                ),
+              );
+            },
             child: Text(
               'Explore Now',
               style: TBtStyle,
