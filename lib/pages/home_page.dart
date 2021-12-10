@@ -73,6 +73,7 @@ class homepage extends StatelessWidget {
                     // id: 2,
                     name: 'Bandung',
                     imageUrl: 'assets/city2.png',
+                    isPopuler: true,
                   ),
                 ),
                 SizedBox(
