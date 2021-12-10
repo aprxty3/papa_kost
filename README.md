@@ -1,16 +1,13 @@
 # papa_kost
 
-A new Flutter project.
+A project based learning course from BuildWith Angga
+* https://class.buildwithangga.com/kelas/dart-flutter-development-bootcamp-find-house-app?thumbnail=S3hjEdZazw.98&main_leads=searchresult
 
-## Getting Started
+## Figma Design
+https://www.figma.com/file/jfCEShvyyi5sFXSioSA0Dl/Cozy-%5BFull-Edition%5D-Update?node-id=153%3A282
 
-This project is a starting point for a Flutter application.
+## API
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## Design View
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
