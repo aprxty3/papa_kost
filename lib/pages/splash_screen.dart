@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:papa_kost/theme.dart';
 
-class splashScreen extends StatelessWidget {
+class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    Widget Header() {
+    Widget header() {
       return Padding(
-        padding: EdgeInsets.only(
+        padding: const EdgeInsets.only(
           top: 60,
           left: 30,
           right: 60,
@@ -17,20 +17,20 @@ class splashScreen extends StatelessWidget {
             Container(
               width: 50,
               height: 50,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage('assets/logo.png'),
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             Text(
               'Find Cozy House \nto Stay and Happy',
               style: TopStyle,
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Text(
@@ -42,15 +42,15 @@ class splashScreen extends StatelessWidget {
       );
     }
 
-    Widget ExploreButton() {
+    Widget explorebutton() {
       return Padding(
-        padding: EdgeInsets.only(top: 40, left: 30),
+        padding: const EdgeInsets.only(top: 40, left: 30),
         child: Container(
           width: 210,
           height: 50,
           child: TextButton(
             style: TextButton.styleFrom(
-              backgroundColor: Color(0xff5843BE),
+              backgroundColor: const Color(0xff5843BE),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(17),
               ),
@@ -65,10 +65,10 @@ class splashScreen extends StatelessWidget {
       );
     }
 
-    Widget Footer() {
+    Widget footer() {
       return Stack(
         children: [
-          Align(
+          const Align(
             alignment: Alignment.bottomCenter,
           ),
           Image.asset('assets/splash_image.png'),
@@ -81,9 +81,9 @@ class splashScreen extends StatelessWidget {
           child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Header(),
-          ExploreButton(),
-          Footer(),
+          header(),
+          explorebutton(),
+          footer(),
         ],
       )),
     );
