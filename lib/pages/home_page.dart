@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:papa_kost/theme.dart';
+import 'package:papa_kost/widget/kota_cart.dart';
 
 class homepage extends StatelessWidget {
   @override
@@ -37,25 +38,16 @@ class homepage extends StatelessWidget {
           SizedBox(
             height: 16,
           ),
-          Row(
-            children: [
-              Column(
-                children: [
-                  Image.asset(
-                    'assets/city1.png',
-                    width: 120,
-                    height: 102,
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Text(
-                    'Jakarta',
-                    style: KotaStyle,
-                  ),
-                ],
-              ),
-            ],
+          Container(
+            height: 150,
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              children: [
+                KoCart(),
+                KoCart(),
+                KoCart(),
+              ],
+            ),
           )
         ],
       );
