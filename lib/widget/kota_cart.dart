@@ -25,6 +25,28 @@ class KoCart extends StatelessWidget {
                   height: 102,
                   fit: BoxFit.cover,
                 ),
+                kota.isPopuler
+                    ? Align(
+                        alignment: Alignment.topRight,
+                        child: Container(
+                          width: 50,
+                          height: 30,
+                          decoration: BoxDecoration(
+                            color: Color(0xff5843BE),
+                            borderRadius: BorderRadius.only(
+                              bottomLeft: Radius.circular(30),
+                            ),
+                          ),
+                          child: Center(
+                            child: Image.asset(
+                              'assets/icon_star.png',
+                              width: 22,
+                              height: 22,
+                            ),
+                          ),
+                        ),
+                      )
+                    : Container(),
               ],
             ),
             SizedBox(
