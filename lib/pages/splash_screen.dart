@@ -65,6 +65,17 @@ class splashScreen extends StatelessWidget {
       );
     }
 
+    Widget Footer() {
+      return Stack(
+        children: [
+          Align(
+            alignment: Alignment.bottomCenter,
+          ),
+          Image.asset('assets/splash_image.png'),
+        ],
+      );
+    }
+
     return Scaffold(
       body: SingleChildScrollView(
           child: Column(
@@ -72,6 +83,7 @@ class splashScreen extends StatelessWidget {
         children: [
           Header(),
           ExploreButton(),
+          Footer(),
         ],
       )),
     );
