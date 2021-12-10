@@ -60,7 +60,7 @@ class homepage extends StatelessWidget {
                 ),
                 KoCart(
                   Kota(
-                    id: 1,
+                    // id: 1,
                     name: 'Jakarta',
                     imageUrl: 'assets/city1.png',
                   ),
@@ -70,7 +70,7 @@ class homepage extends StatelessWidget {
                 ),
                 KoCart(
                   Kota(
-                    id: 2,
+                    // id: 2,
                     name: 'Bandung',
                     imageUrl: 'assets/city2.png',
                   ),
@@ -80,13 +80,10 @@ class homepage extends StatelessWidget {
                 ),
                 KoCart(
                   Kota(
-                    id: 3,
+                    // id: 3,
                     name: 'Surabaya',
                     imageUrl: 'assets/city3.png',
                   ),
-                ),
-                SizedBox(
-                  width: 20,
                 ),
                 SizedBox(
                   width: 24,
