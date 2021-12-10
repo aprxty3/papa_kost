@@ -10,6 +10,6 @@ class Kota {
     this.id,
     this.name,
     this.imageUrl,
-    this.isPopuler,
+    this.isPopuler = false,
   });
 }
