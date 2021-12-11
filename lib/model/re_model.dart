@@ -4,7 +4,7 @@ class Recom {
   String imageUrl;
   String name;
   int price;
-  String bulan;
+
   String location;
   String bintang;
 
@@ -13,7 +13,6 @@ class Recom {
     this.bintang,
     this.name,
     this.price,
-    this.bulan,
     this.location,
   });
 }
