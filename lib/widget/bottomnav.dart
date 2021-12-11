@@ -14,16 +14,19 @@ class BotItem extends StatelessWidget {
     return Column(
       children: [
         Spacer(),
-        Image.asset(
-          imageUrl,
-          width: 26,
-          height: 26,
+        IconButton(
+          onPressed: () {},
+          icon: Image.asset(
+            imageUrl,
+            width: 26,
+            height: 26,
+          ),
         ),
         Spacer(),
         isActive
             ? Container(
                 width: 30,
-                height: 2,
+                height: 4,
                 decoration: BoxDecoration(
                   color: Color(0xff7F74EB),
                   borderRadius: BorderRadius.vertical(
