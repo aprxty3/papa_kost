@@ -204,10 +204,11 @@ class homepage extends StatelessWidget {
           width: 320,
           height: 65,
           decoration: BoxDecoration(
-            color: Colors.grey, //Color(0xffF6F7F8),
+            color: Color(0xffF6F7F8),
             borderRadius: BorderRadius.circular(23),
           ),
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               BotItem(
                 imageUrl: 'assets/icon_home.png',
@@ -240,13 +241,14 @@ class homepage extends StatelessWidget {
             popularCity(),
             recom(),
             tng(),
-            bottomNav(),
             SizedBox(
-              height: 30,
+              height: 50,
             ),
           ],
         ),
       ),
+      floatingActionButton: bottomNav(),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
 }
