@@ -6,9 +6,11 @@ class Recom {
   int price;
   String bulan;
   String location;
+  String bintang;
 
   Recom({
     this.imageUrl,
+    this.bintang,
     this.name,
     this.price,
     this.bulan,
