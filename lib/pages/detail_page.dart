@@ -14,7 +14,7 @@ class DetailPage extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.only(
-              top: 30,
+              top: 20,
               left: 24,
               right: 24,
             ),
@@ -52,12 +52,12 @@ class DetailPage extends StatelessWidget {
           Container(
             width: MediaQuery.of(context).size.width,
             height: 200,
-            color: Colors.grey,
+            // color: Colors.green,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.vertical(
                 top: Radius.circular(20),
               ),
-              color: Colors.grey,
+              color: Colors.white,
             ),
           ),
         ],
@@ -65,11 +65,14 @@ class DetailPage extends StatelessWidget {
     }
 
     return Scaffold(
-      body: Stack(
-        children: [
-          header(),
-          content(),
-        ],
+      body: SafeArea(
+        bottom: false,
+        child: Stack(
+          children: [
+            header(),
+            content(),
+          ],
+        ),
       ),
     );
   }
