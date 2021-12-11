@@ -59,3 +59,9 @@ TextStyle LocStyle = GoogleFonts.poppins(
   fontWeight: FontWeight.w300,
   color: Color(0xff7A7E86),
 );
+
+TextStyle Rate = GoogleFonts.poppins(
+  fontSize: 13,
+  fontWeight: FontWeight.w500,
+  color: Colors.white,
+);
