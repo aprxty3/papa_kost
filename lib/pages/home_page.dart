@@ -116,13 +116,40 @@ class homepage extends StatelessWidget {
             ),
             ReCard(
               Recom(
-                  imageUrl: 'assets/space1.png',
-                  bintang: '4/5',
-                  name: 'Kuretakeso Hott',
-                  price: 52,
-                  bulan: ' / Month',
-                  location: 'Bandung, Germany'),
+                imageUrl: 'assets/space1.png',
+                bintang: '4/5',
+                name: 'Kuretakeso Hott',
+                price: 52,
+                location: 'Bandung, Germany',
+              ),
             ),
+            SizedBox(
+              height: 30,
+            ),
+            ReCard(
+              Recom(
+                imageUrl: 'assets/space2.png',
+                bintang: '5/5',
+                name: 'Roemah Nenek',
+                price: 11,
+                location: 'Seattle, Bogor',
+              ),
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            ReCard(
+              Recom(
+                imageUrl: 'assets/space3.png',
+                bintang: '3/5',
+                name: 'Darrling How',
+                price: 20,
+                location: 'Jakarta, Indonesia',
+              ),
+            ),
+            SizedBox(
+              height: 80,
+            )
           ],
         ),
       );
