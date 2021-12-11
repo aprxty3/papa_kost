@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:papa_kost/theme.dart';
-import 'package:papa_kost/widget/kota_cart.dart';
+import 'package:papa_kost/widget/kota_card.dart';
 import 'package:papa_kost/model/ko_model.dart';
+import 'package:papa_kost/widget/recom_card.dart';
 
 class homepage extends StatelessWidget {
   @override
@@ -96,6 +97,28 @@ class homepage extends StatelessWidget {
       );
     }
 
+    Widget recom() {
+      return Padding(
+        padding: const EdgeInsets.only(
+          top: 30,
+          left: 24,
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Recommended Space',
+              style: RTTGStyle,
+            ),
+            SizedBox(
+              height: 16,
+            ),
+            ReCard(),
+          ],
+        ),
+      );
+    }
+
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -103,6 +126,7 @@ class homepage extends StatelessWidget {
           children: [
             header(),
             popularCity(),
+            recom(),
           ],
         ),
       ),
