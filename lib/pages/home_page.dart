@@ -15,7 +15,7 @@ class homepage extends StatelessWidget {
       return Padding(
         padding: const EdgeInsets.only(
           left: 24,
-          top: 24,
+          top: 10,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -233,18 +233,20 @@ class homepage extends StatelessWidget {
     }
 
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            header(),
-            popularCity(),
-            recom(),
-            tng(),
-            SizedBox(
-              height: 50,
-            ),
-          ],
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              header(),
+              popularCity(),
+              recom(),
+              tng(),
+              SizedBox(
+                height: 50,
+              ),
+            ],
+          ),
         ),
       ),
       floatingActionButton: bottomNav(),
