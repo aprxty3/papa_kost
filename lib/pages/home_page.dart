@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:papa_kost/model/re_model.dart';
+import 'package:papa_kost/model/tng_model.dart';
 import 'package:papa_kost/theme.dart';
 import 'package:papa_kost/widget/kota_card.dart';
 import 'package:papa_kost/model/ko_model.dart';
 import 'package:papa_kost/widget/recom_card.dart';
+import 'package:papa_kost/widget/tng.dart';
 
 class homepage extends StatelessWidget {
   @override
@@ -147,9 +149,45 @@ class homepage extends StatelessWidget {
                 location: 'Jakarta, Indonesia',
               ),
             ),
+          ],
+        ),
+      );
+    }
+
+    Widget tng() {
+      return Padding(
+        padding: const EdgeInsets.only(
+          top: 30,
+          left: 24,
+          right: 30,
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Tips & Guidance',
+              style: RTTGStyle,
+            ),
             SizedBox(
-              height: 80,
-            )
+              height: 16,
+            ),
+            TnG(
+              Tips(
+                imageUrl: 'assets/tips1.png',
+                name: 'City Guidelines',
+                date: 'Updated 20 Apr',
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            TnG(
+              Tips(
+                imageUrl: 'assets/tips2.png',
+                name: 'Jakarta Fairship',
+                date: 'Updated 11 Dec',
+              ),
+            ),
           ],
         ),
       );
@@ -163,6 +201,7 @@ class homepage extends StatelessWidget {
             header(),
             popularCity(),
             recom(),
+            tng(),
           ],
         ),
       ),
