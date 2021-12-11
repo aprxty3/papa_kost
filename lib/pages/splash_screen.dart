@@ -79,21 +79,28 @@ class SplashScreen extends StatelessWidget {
           const Align(
             alignment: Alignment.bottomCenter,
           ),
-          Image.asset('assets/splash_image.png'),
+          Image.asset(
+            'assets/splash_image.png',
+            height: 375,
+            width: MediaQuery.of(context).size.width,
+            fit: BoxFit.cover,
+          ),
         ],
       );
     }
 
     return Scaffold(
-      body: SingleChildScrollView(
-          child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          header(),
-          explorebutton(),
-          footer(),
-        ],
-      )),
+      body: SafeArea(
+        bottom: false,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            header(),
+            explorebutton(),
+            footer(),
+          ],
+        ),
+      ),
     );
   }
 }
