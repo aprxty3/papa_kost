@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:papa_kost/model/re_model.dart';
 import 'package:papa_kost/theme.dart';
 import 'package:papa_kost/widget/kota_card.dart';
 import 'package:papa_kost/model/ko_model.dart';
@@ -113,7 +114,15 @@ class homepage extends StatelessWidget {
             SizedBox(
               height: 16,
             ),
-            ReCard(),
+            ReCard(
+              Recom(
+                  imageUrl: 'assets/space1.png',
+                  bintang: '4/5',
+                  name: 'Kuretakeso Hott',
+                  price: 52,
+                  bulan: ' / Month',
+                  location: 'Bandung, Germany'),
+            ),
           ],
         ),
       );
