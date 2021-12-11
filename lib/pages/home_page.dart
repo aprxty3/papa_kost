@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:papa_kost/model/re_model.dart';
 import 'package:papa_kost/model/tng_model.dart';
 import 'package:papa_kost/theme.dart';
+import 'package:papa_kost/widget/bottomnav.dart';
 import 'package:papa_kost/widget/kota_card.dart';
 import 'package:papa_kost/model/ko_model.dart';
 import 'package:papa_kost/widget/recom_card.dart';
@@ -188,7 +189,44 @@ class homepage extends StatelessWidget {
                 date: 'Updated 11 Dec',
               ),
             ),
+            SizedBox(
+              height: 50,
+            )
           ],
+        ),
+      );
+    }
+
+    Widget bottomNav() {
+      return Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 24),
+        child: Container(
+          width: 320,
+          height: 65,
+          decoration: BoxDecoration(
+            color: Colors.grey, //Color(0xffF6F7F8),
+            borderRadius: BorderRadius.circular(23),
+          ),
+          child: Row(
+            children: [
+              BotItem(
+                imageUrl: 'assets/icon_home.png',
+                isActive: true,
+              ),
+              BotItem(
+                imageUrl: 'assets/icon_email.png',
+                isActive: false,
+              ),
+              BotItem(
+                imageUrl: 'assets/icon_card.png',
+                isActive: false,
+              ),
+              BotItem(
+                imageUrl: 'assets/icon_love.png',
+                isActive: false,
+              ),
+            ],
+          ),
         ),
       );
     }
@@ -202,6 +240,10 @@ class homepage extends StatelessWidget {
             popularCity(),
             recom(),
             tng(),
+            bottomNav(),
+            SizedBox(
+              height: 30,
+            ),
           ],
         ),
       ),
