@@ -3,9 +3,9 @@ import 'package:papa_kost/model/re_model.dart';
 import 'package:papa_kost/theme.dart';
 
 class ReCard extends StatelessWidget {
-  final Recom recom;
+  // final Recom recom;
 
-  ReCard(this.recom);
+  // ReCard(this.recom);
 
   @override
   Widget build(BuildContext context) {
@@ -53,6 +53,40 @@ class ReCard extends StatelessWidget {
               ],
             ),
           ),
+        ),
+        SizedBox(
+          width: 20,
+        ),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Kuretakeso Hott',
+              style: KostStyle,
+            ),
+            SizedBox(
+              height: 2,
+            ),
+            Text.rich(
+              TextSpan(
+                text: '\$52',
+                style: PriceStyle,
+                children: [
+                  TextSpan(
+                    text: ' / Month',
+                    style: MonthStyle,
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 16,
+            ),
+            Text(
+              'Bandung, Germany',
+              style: LocStyle,
+            ),
+          ],
         )
       ],
     );
