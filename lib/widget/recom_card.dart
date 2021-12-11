@@ -73,7 +73,7 @@ class ReCard extends StatelessWidget {
                 style: PriceStyle,
                 children: [
                   TextSpan(
-                    text: recom.bulan,
+                    text: ' / Month',
                     style: MonthStyle,
                   ),
                 ],
