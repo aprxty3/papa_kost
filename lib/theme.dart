@@ -90,3 +90,9 @@ TextStyle Facilities2 = GoogleFonts.poppins(
   fontWeight: FontWeight.w300,
   color: Color(0xff7A7E86),
 );
+
+TextStyle Locations = GoogleFonts.poppins(
+  fontSize: 14,
+  fontWeight: FontWeight.w400,
+  color: Color(0xff7A7E86),
+);
