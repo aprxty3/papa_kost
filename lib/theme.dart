@@ -65,3 +65,28 @@ TextStyle Rate = GoogleFonts.poppins(
   fontWeight: FontWeight.w500,
   color: Colors.white,
 );
+
+// Detail Page
+TextStyle BoardingName = GoogleFonts.poppins(
+  fontSize: 22,
+  fontWeight: FontWeight.w500,
+  color: Colors.black,
+);
+
+TextStyle Facilities = GoogleFonts.poppins(
+  fontSize: 16,
+  fontWeight: FontWeight.w400,
+  color: Colors.black,
+);
+
+TextStyle Facilities1 = GoogleFonts.poppins(
+  fontSize: 14,
+  fontWeight: FontWeight.w500,
+  color: Color(0xff5843BE),
+);
+
+TextStyle Facilities2 = GoogleFonts.poppins(
+  fontSize: 14,
+  fontWeight: FontWeight.w300,
+  color: Color(0xff7A7E86),
+);
