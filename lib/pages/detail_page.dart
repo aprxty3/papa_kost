@@ -52,91 +52,99 @@ class DetailPage extends StatelessWidget {
           ),
           Container(
             width: MediaQuery.of(context).size.width,
-            // height: 200,
-            // color: Colors.green,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.vertical(
                 top: Radius.circular(20),
               ),
               color: Colors.white,
             ),
-            child: Padding(
-              padding: const EdgeInsets.only(
-                top: 30,
-                left: 24,
-                right: 24,
-              ),
-              child: Column(
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            child: Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(
+                    top: 30,
+                    left: 24,
+                    right: 24,
+                  ),
+                  child: Column(
                     children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Kuretakeso Hott',
-                            style: BoardingName,
-                          ),
-                          SizedBox(
-                            height: 2,
-                          ),
-                          Text.rich(
-                            TextSpan(
-                              text: '\$52',
-                              style: PriceStyle,
-                              children: [
-                                TextSpan(
-                                  text: ' / Month',
-                                  style: MonthStyle,
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
                       Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Image.asset(
-                            'assets/icon_star.png',
-                            width: 20,
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Kuretakeso Hott',
+                                style: BoardingName,
+                              ),
+                              SizedBox(
+                                height: 2,
+                              ),
+                              Text.rich(
+                                TextSpan(
+                                  text: '\$52',
+                                  style: PriceStyle,
+                                  children: [
+                                    TextSpan(
+                                      text: ' / Month',
+                                      style: MonthStyle,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
                           ),
-                          SizedBox(
-                            width: 2,
-                          ),
-                          Image.asset(
-                            'assets/icon_star.png',
-                            width: 20,
-                          ),
-                          SizedBox(
-                            width: 2,
-                          ),
-                          Image.asset(
-                            'assets/icon_star.png',
-                            width: 20,
-                          ),
-                          SizedBox(
-                            width: 2,
-                          ),
-                          Image.asset(
-                            'assets/icon_star.png',
-                            width: 20,
-                          ),
-                          SizedBox(
-                            width: 2,
-                          ),
-                          Image.asset(
-                            'assets/icon_star_grey.png',
-                            width: 20,
+                          Row(
+                            children: [
+                              Image.asset(
+                                'assets/icon_star.png',
+                                width: 20,
+                              ),
+                              SizedBox(
+                                width: 2,
+                              ),
+                              Image.asset(
+                                'assets/icon_star.png',
+                                width: 20,
+                              ),
+                              SizedBox(
+                                width: 2,
+                              ),
+                              Image.asset(
+                                'assets/icon_star.png',
+                                width: 20,
+                              ),
+                              SizedBox(
+                                width: 2,
+                              ),
+                              Image.asset(
+                                'assets/icon_star.png',
+                                width: 20,
+                              ),
+                              SizedBox(
+                                width: 2,
+                              ),
+                              Image.asset(
+                                'assets/icon_star_grey.png',
+                                width: 20,
+                              ),
+                              SizedBox(
+                                width: 24,
+                              ),
+                            ],
                           ),
                         ],
                       ),
                     ],
                   ),
-                  SizedBox(
-                    height: 30,
-                  ),
-                  Column(
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 24),
+                  child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
@@ -144,7 +152,7 @@ class DetailPage extends StatelessWidget {
                         style: Facilities,
                       ),
                       SizedBox(
-                        height: 12,
+                        height: 15,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -225,17 +233,106 @@ class DetailPage extends StatelessWidget {
                       ),
                     ],
                   ),
-                ],
-              ),
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 24),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Photos',
+                        style: Facilities,
+                      ),
+                      SizedBox(
+                        height: 15,
+                      ),
+                      SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: Row(
+                          children: [
+                            SizedBox(
+                              width: 18,
+                            ),
+                            Image.asset(
+                              'assets/photo1.png',
+                              width: 110,
+                              height: 88,
+                            ),
+                            SizedBox(
+                              width: 18,
+                            ),
+                            Image.asset(
+                              'assets/photo2.png',
+                              width: 110,
+                              height: 88,
+                            ),
+                            SizedBox(
+                              width: 18,
+                            ),
+                            Image.asset(
+                              'assets/photo3.png',
+                              width: 110,
+                              height: 88,
+                            ),
+                            SizedBox(
+                              width: 18,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 24),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Location',
+                        style: Facilities,
+                      ),
+                      SizedBox(
+                        height: 6,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Jln. Kappan Sukses No. 20',
+                                style: Locations,
+                              ),
+                              SizedBox(
+                                height: 2,
+                              ),
+                              Text(
+                                'Palembang',
+                                style: Locations,
+                              ),
+                            ],
+                          ),
+                          Image.asset(
+                            'assets/btn_map.png',
+                            width: 40,
+                          )
+                        ],
+                      ),
+                    ],
+                  ),
+                )
+              ],
             ),
           ),
         ],
-      );
-    }
-
-    Widget photo() {
-      return Column(
-        children: [Text('Photos')],
       );
     }
 
@@ -246,7 +343,6 @@ class DetailPage extends StatelessWidget {
           children: [
             header(),
             content(),
-            photo(),
           ],
         ),
       ),
