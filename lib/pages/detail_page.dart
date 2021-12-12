@@ -233,6 +233,12 @@ class DetailPage extends StatelessWidget {
       );
     }
 
+    Widget photo() {
+      return Column(
+        children: [Text('Photos')],
+      );
+    }
+
     return Scaffold(
       body: SafeArea(
         bottom: false,
@@ -240,6 +246,7 @@ class DetailPage extends StatelessWidget {
           children: [
             header(),
             content(),
+            photo(),
           ],
         ),
       ),
