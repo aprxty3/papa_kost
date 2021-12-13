@@ -1,14 +1,22 @@
+import 'dart:isolate';
+
 import 'package:flutter/material.dart';
 import 'package:papa_kost/theme.dart';
 
 class FacilityItem extends StatelessWidget {
+  final String name;
+  final int capacity;
+  final String imageUrl;
+
+  FacilityItem({this.name, this.imageUrl, this.capacity});
+
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Image.asset(
-          'assets/icon_kitchen.png',
+          imageUrl,
           width: 32,
         ),
         SizedBox(
@@ -16,11 +24,11 @@ class FacilityItem extends StatelessWidget {
         ),
         Text.rich(
           TextSpan(
-            text: '2',
+            text: '$capacity',
             style: Facilities1,
             children: [
               TextSpan(
-                text: ' Kitchen',
+                text: ' $name',
                 style: Facilities2,
               ),
             ],
