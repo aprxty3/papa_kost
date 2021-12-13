@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:papa_kost/pages/error_page.dart';
 import 'package:papa_kost/pages/map.dart';
 import 'package:papa_kost/pages/user.dart';
 import 'package:papa_kost/theme.dart';
@@ -314,7 +315,7 @@ class DetailPage extends StatelessWidget {
                       // launchUrl('https://wa.me/+6285156454374');
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => CallUser()),
+                        MaterialPageRoute(builder: (context) => ErrorPage()),
                       );
                     },
                     child: Text(
