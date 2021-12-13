@@ -14,4 +14,5 @@ https://www.figma.com/file/jfCEShvyyi5sFXSioSA0Dl/Cozy-%5BFull-Edition%5D-Update
 ![image](https://user-images.githubusercontent.com/73772152/145760732-cad4f46c-576d-43c3-92c7-a9a20f7cc4b5.png)
 ![image](https://user-images.githubusercontent.com/73772152/145773959-91ad0adc-255e-4d58-9a86-cc5a8d1d55c8.png)
 ![image](https://user-images.githubusercontent.com/73772152/145774046-f36a4800-00e9-452a-96dc-6a07615a96ce.png)
+![image](https://user-images.githubusercontent.com/73772152/145776229-86e5a927-732b-4a31-a786-a6efbc67eabc.png)
 
