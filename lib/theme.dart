@@ -96,3 +96,16 @@ TextStyle Locations = GoogleFonts.poppins(
   fontWeight: FontWeight.w400,
   color: Color(0xff7A7E86),
 );
+
+//User Call
+TextStyle Usercall = GoogleFonts.poppins(
+  fontSize: 20,
+  fontWeight: FontWeight.w500,
+  color: Colors.black,
+);
+
+TextStyle Usercallminute = GoogleFonts.poppins(
+  fontSize: 16,
+  fontWeight: FontWeight.w300,
+  color: Color(0xff82868E),
+);
