@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:papa_kost/theme.dart';
+import 'package:papa_kost/widget/facility.dart';
 
 class DetailPage extends StatelessWidget {
   @override
@@ -157,78 +158,9 @@ class DetailPage extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Image.asset(
-                                'assets/icon_kitchen.png',
-                                width: 32,
-                              ),
-                              SizedBox(
-                                height: 8,
-                              ),
-                              Text.rich(
-                                TextSpan(
-                                  text: '2',
-                                  style: Facilities1,
-                                  children: [
-                                    TextSpan(
-                                      text: ' Kitchen',
-                                      style: Facilities2,
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Image.asset(
-                                'assets/icon_bedroom.png',
-                                width: 32,
-                              ),
-                              SizedBox(
-                                height: 8,
-                              ),
-                              Text.rich(
-                                TextSpan(
-                                  text: '3',
-                                  style: Facilities1,
-                                  children: [
-                                    TextSpan(
-                                      text: ' Bedroom',
-                                      style: Facilities2,
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Image.asset(
-                                'assets/icon_cupboard.png',
-                                width: 32,
-                              ),
-                              SizedBox(
-                                height: 8,
-                              ),
-                              Text.rich(
-                                TextSpan(
-                                  text: '3',
-                                  style: Facilities1,
-                                  children: [
-                                    TextSpan(
-                                      text: ' Lemari',
-                                      style: Facilities2,
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
+                          FacilityItem(),
+                          FacilityItem(),
+                          FacilityItem(),
                         ],
                       ),
                     ],
