@@ -109,3 +109,16 @@ TextStyle Usercallminute = GoogleFonts.poppins(
   fontWeight: FontWeight.w300,
   color: Color(0xff82868E),
 );
+
+//Error Page
+TextStyle ErrorNot1 = GoogleFonts.poppins(
+  fontSize: 24,
+  fontWeight: FontWeight.w500,
+  color: Colors.black,
+);
+
+TextStyle ErrorNot2 = GoogleFonts.poppins(
+  fontSize: 16,
+  fontWeight: FontWeight.w300,
+  color: Color(0xff82868E),
+);
