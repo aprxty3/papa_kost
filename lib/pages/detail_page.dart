@@ -13,7 +13,10 @@ class DetailPage extends StatelessWidget {
       if (await canLaunch(url)) {
         launch(url);
       } else {
-        throw (url);
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => ErrorPage()),
+        );
       }
     }
 
@@ -315,7 +318,7 @@ class DetailPage extends StatelessWidget {
                       // launchUrl('https://wa.me/+6285156454374');
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => ErrorPage()),
+                        MaterialPageRoute(builder: (context) => CallUser()),
                       );
                     },
                     child: Text(
