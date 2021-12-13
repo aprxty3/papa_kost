@@ -181,54 +181,61 @@ class DetailPage extends StatelessWidget {
                 SizedBox(
                   height: 30,
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 24),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Photos',
-                        style: Facilities,
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(left: 24.0),
+                      child: Column(
+                        children: [
+                          Text(
+                            'Photos',
+                            style: Facilities,
+                          ),
+                        ],
                       ),
-                      SizedBox(
-                        height: 15,
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        children: [
+                          SizedBox(
+                            width: 24,
+                          ),
+                          Image.asset(
+                            'assets/photo1.png',
+                            width: 110,
+                            height: 88,
+                            fit: BoxFit.cover,
+                          ),
+                          SizedBox(
+                            width: 18,
+                          ),
+                          Image.asset(
+                            'assets/photo2.png',
+                            width: 110,
+                            height: 88,
+                            fit: BoxFit.cover,
+                          ),
+                          SizedBox(
+                            width: 18,
+                          ),
+                          Image.asset(
+                            'assets/photo3.png',
+                            width: 110,
+                            height: 88,
+                            fit: BoxFit.cover,
+                          ),
+                          SizedBox(
+                            width: 24,
+                          ),
+                        ],
                       ),
-                      SingleChildScrollView(
-                        scrollDirection: Axis.horizontal,
-                        child: Row(
-                          children: [
-                            SizedBox(
-                              width: 18,
-                            ),
-                            Image.asset(
-                              'assets/photo1.png',
-                              width: 110,
-                              height: 88,
-                            ),
-                            SizedBox(
-                              width: 18,
-                            ),
-                            Image.asset(
-                              'assets/photo2.png',
-                              width: 110,
-                              height: 88,
-                            ),
-                            SizedBox(
-                              width: 18,
-                            ),
-                            Image.asset(
-                              'assets/photo3.png',
-                              width: 110,
-                              height: 88,
-                            ),
-                            SizedBox(
-                              width: 18,
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
                 SizedBox(
                   height: 30,
@@ -252,14 +259,7 @@ class DetailPage extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Jln. Kappan Sukses No. 20',
-                                style: Locations,
-                              ),
-                              SizedBox(
-                                height: 2,
-                              ),
-                              Text(
-                                'Palembang',
+                                'Jln. Kappan Sukses No. 20 \n Palembang',
                                 style: Locations,
                               ),
                             ],
@@ -276,6 +276,36 @@ class DetailPage extends StatelessWidget {
                       ),
                     ],
                   ),
+                ),
+                SizedBox(
+                  height: 40,
+                ),
+                Container(
+                  width: 327,
+                  height: 50,
+                  child: TextButton(
+                    style: TextButton.styleFrom(
+                      backgroundColor: const Color(0xff5843BE),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(17),
+                      ),
+                    ),
+                    onPressed: () {
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(
+                      //     builder: (context) => homepage(),
+                      //   ),
+                      // );
+                    },
+                    child: Text(
+                      'Book Now',
+                      style: TBtStyle,
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 40,
                 )
               ],
             ),
