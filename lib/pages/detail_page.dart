@@ -320,10 +320,14 @@ class DetailPage extends StatelessWidget {
                               ),
                             ],
                           ),
-                          Image.asset(
-                            'assets/btn_map.png',
-                            width: 40,
-                          )
+                          IconButton(
+                            icon: Image.asset(
+                              'assets/btn_map.png',
+                              width: 40,
+                            ),
+                            // iconSize: 50,
+                            onPressed: () {},
+                          ),
                         ],
                       ),
                     ],
