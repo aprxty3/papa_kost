@@ -1,10 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:papa_kost/theme.dart';
 import 'package:papa_kost/widget/facility.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class DetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    launchUrl(String url) async {
+      if (await canLaunch(url)) {
+        launch(url);
+      } else {
+        throw (url);
+      }
+    }
+
     Widget header() {
       return Stack(
         children: [
@@ -264,13 +273,17 @@ class DetailPage extends StatelessWidget {
                               ),
                             ],
                           ),
-                          IconButton(
-                            icon: Image.asset(
+                          InkWell(
+                            onTap: () {
+                              launchUrl(
+                                  'https://goo.gl/maps/SyZx2yjWB1yR6AeH8');
+
+                              // launchUrl(widget.space.mapUrl);
+                            },
+                            child: Image.asset(
                               'assets/btn_map.png',
                               width: 40,
                             ),
-                            // iconSize: 50,
-                            onPressed: () {},
                           ),
                         ],
                       ),
@@ -291,12 +304,7 @@ class DetailPage extends StatelessWidget {
                       ),
                     ),
                     onPressed: () {
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(
-                      //     builder: (context) => homepage(),
-                      //   ),
-                      // );
+                      launchUrl('https://wa.me/+6285156454374');
                     },
                     child: Text(
                       'Book Now',
