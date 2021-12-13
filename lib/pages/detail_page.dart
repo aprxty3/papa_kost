@@ -158,9 +158,21 @@ class DetailPage extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          FacilityItem(),
-                          FacilityItem(),
-                          FacilityItem(),
+                          FacilityItem(
+                            imageUrl: 'assets/icon_kitchen.png',
+                            capacity: 2,
+                            name: 'Kitchen',
+                          ),
+                          FacilityItem(
+                            imageUrl: 'assets/icon_bedroom.png',
+                            capacity: 3,
+                            name: 'Bedroom',
+                          ),
+                          FacilityItem(
+                            imageUrl: 'assets/icon_cupboard.png',
+                            capacity: 3,
+                            name: 'Cupboard',
+                          ),
                         ],
                       ),
                     ],
