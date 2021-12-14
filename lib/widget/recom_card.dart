@@ -29,7 +29,7 @@ class ReCard extends StatelessWidget {
               child: Stack(
                 children: [
                   Image.asset(
-                    recom.imageUrl,
+                    recom.image_url,
                   ),
                   Align(
                     alignment: Alignment.topRight,
@@ -52,7 +52,7 @@ class ReCard extends StatelessWidget {
                               height: 22,
                             ),
                             Text(
-                              recom.bintang,
+                              '${recom.rating}/5',
                               style: Rate,
                             ),
                           ],
@@ -93,7 +93,7 @@ class ReCard extends StatelessWidget {
                 height: 16,
               ),
               Text(
-                recom.location,
+                '${recom.city}, ${recom.country}',
                 style: LocStyle,
               ),
             ],
