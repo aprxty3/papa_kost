@@ -119,11 +119,11 @@ class homepage extends StatelessWidget {
             ),
             ReCard(
               Recom(
-                imageUrl: 'assets/space1.png',
-                bintang: '4/5',
+                image_url: 'assets/space1.png',
+                rating: 4,
                 name: 'Kuretakeso Hott',
                 price: 52,
-                location: 'Bandung, Germany',
+                city: 'Bandung, Germany',
               ),
             ),
             SizedBox(
@@ -131,11 +131,11 @@ class homepage extends StatelessWidget {
             ),
             ReCard(
               Recom(
-                imageUrl: 'assets/space2.png',
-                bintang: '5/5',
+                image_url: 'assets/space2.png',
+                rating: 5,
                 name: 'Roemah Nenek',
                 price: 11,
-                location: 'Seattle, Bogor',
+                city: 'Seattle, Bogor',
               ),
             ),
             SizedBox(
@@ -143,11 +143,11 @@ class homepage extends StatelessWidget {
             ),
             ReCard(
               Recom(
-                imageUrl: 'assets/space3.png',
-                bintang: '3/5',
+                image_url: 'assets/space3.png',
+                rating: 3,
                 name: 'Darrling How',
                 price: 20,
-                location: 'Jakarta, Indonesia',
+                city: 'Jakarta',
               ),
             ),
           ],
