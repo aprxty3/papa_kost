@@ -99,7 +99,7 @@ class DetailPage extends StatelessWidget {
                               ),
                               Text.rich(
                                 TextSpan(
-                                  text: '\$52',
+                                  text: 'Rp. 400K',
                                   style: PriceStyle,
                                   children: [
                                     TextSpan(
