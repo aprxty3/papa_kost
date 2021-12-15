@@ -14,7 +14,6 @@ class homepage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var recomProv = Provider.of<RecomProv>(context);
-    recomProv.getRecomSpace();
 
     Widget header() {
       return Padding(
@@ -112,50 +111,71 @@ class homepage extends StatelessWidget {
           top: 30,
           left: 24,
         ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              'Recommended Space',
-              style: RTTGStyle,
-            ),
-            SizedBox(
-              height: 16,
-            ),
-            ReCard(
-              Recom(
-                image_url: 'assets/space1.png',
-                rating: 4,
-                name: 'Kuretakeso Hott',
-                price: 400,
-                city: 'Bandung, Germany',
-              ),
-            ),
-            SizedBox(
-              height: 30,
-            ),
-            ReCard(
-              Recom(
-                image_url: 'assets/space2.png',
-                rating: 5,
-                name: 'Roemah Nenek',
-                price: 250,
-                city: 'Seattle, Bogor',
-              ),
-            ),
-            SizedBox(
-              height: 30,
-            ),
-            ReCard(
-              Recom(
-                image_url: 'assets/space3.png',
-                rating: 3,
-                name: 'Darrling How',
-                price: 520,
-                city: 'Jakarta',
-              ),
-            ),
-          ],
+        child: FutureBuilder(
+          future: recomProv.getRecomSpace(),
+          builder: (context, snapshot) {
+            if (snapshot.hasData) {
+              List<Recom> data = snapshot.data;
+
+              int index = 0;
+
+              return Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: data.map((item) {
+                  index++;
+                  return Container(
+                    margin: EdgeInsets.only(top: index == 1 ? 0 : 30),
+                    child: ReCard(item),
+                  );
+                }).toList(),
+                //[
+                // Text(
+                //   'Recommended Space',
+                //   style: RTTGStyle,
+                // ),
+                // SizedBox(
+                //   height: 16,
+                // ),
+                // ReCard(
+                //   Recom(
+                //     image_url: 'assets/space1.png',
+                //     rating: 4,
+                //     name: 'Kuretakeso Hott',
+                //     price: 400,
+                //     city: 'Bandung, Germany',
+                //   ),
+                // ),
+                // SizedBox(
+                //   height: 30,
+                // ),
+                // ReCard(
+                //   Recom(
+                //     image_url: 'assets/space2.png',
+                //     rating: 5,
+                //     name: 'Roemah Nenek',
+                //     price: 250,
+                //     city: 'Seattle, Bogor',
+                //   ),
+                // ),
+                // SizedBox(
+                //   height: 30,
+                // ),
+                // ReCard(
+                //   Recom(
+                //     image_url: 'assets/space3.png',
+                //     rating: 3,
+                //     name: 'Darrling How',
+                //     price: 520,
+                //     city: 'Jakarta',
+                //   ),
+                // ),
+                //],
+              );
+            }
+            return Center(
+              child: CircularProgressIndicator(),
+            );
+          },
         ),
       );
     }
