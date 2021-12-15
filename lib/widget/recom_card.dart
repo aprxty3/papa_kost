@@ -79,7 +79,7 @@ class ReCard extends StatelessWidget {
               ),
               Text.rich(
                 TextSpan(
-                  text: '\$${recom.price}',
+                  text: 'Rp. ${recom.price}K',
                   style: PriceStyle,
                   children: [
                     TextSpan(
