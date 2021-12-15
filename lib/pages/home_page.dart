@@ -1,16 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:papa_kost/model/re_model.dart';
 import 'package:papa_kost/model/tng_model.dart';
+import 'package:papa_kost/provider/recom_provider.dart';
 import 'package:papa_kost/theme.dart';
 import 'package:papa_kost/widget/bottomnav.dart';
 import 'package:papa_kost/widget/kota_card.dart';
 import 'package:papa_kost/model/ko_model.dart';
 import 'package:papa_kost/widget/recom_card.dart';
 import 'package:papa_kost/widget/tng.dart';
+import 'package:provider/provider.dart';
 
 class homepage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    var recomProv = Provider.of<RecomProv>(context);
+    recomProv.getRecomSpace();
+
     Widget header() {
       return Padding(
         padding: const EdgeInsets.only(
