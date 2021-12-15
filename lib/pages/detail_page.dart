@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:papa_kost/model/re_model.dart';
 import 'package:papa_kost/pages/error_page.dart';
 import 'package:papa_kost/pages/map.dart';
 import 'package:papa_kost/pages/user.dart';
@@ -7,6 +8,10 @@ import 'package:papa_kost/widget/facility.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class DetailPage extends StatelessWidget {
+  final Recom recom;
+
+  DetailPage(this.recom);
+
   @override
   Widget build(BuildContext context) {
     launchUrl(String url) async {
@@ -23,8 +28,8 @@ class DetailPage extends StatelessWidget {
     Widget header() {
       return Stack(
         children: [
-          Image.asset(
-            'assets/thumbnail.png',
+          Image.network(
+            recom.image_url,
             width: MediaQuery.of(context).size.width,
             height: 350,
             fit: BoxFit.cover,
@@ -80,7 +85,6 @@ class DetailPage extends StatelessWidget {
                   padding: const EdgeInsets.only(
                     top: 30,
                     left: 24,
-                    right: 24,
                   ),
                   child: Column(
                     children: [
@@ -91,7 +95,7 @@ class DetailPage extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Kuretakeso Hott',
+                                recom.name,
                                 style: BoardingName,
                               ),
                               SizedBox(
@@ -99,7 +103,7 @@ class DetailPage extends StatelessWidget {
                               ),
                               Text.rich(
                                 TextSpan(
-                                  text: 'Rp. 400K',
+                                  text: '\$${recom.price}',
                                   style: PriceStyle,
                                   children: [
                                     TextSpan(
@@ -175,17 +179,17 @@ class DetailPage extends StatelessWidget {
                         children: [
                           FacilityItem(
                             imageUrl: 'assets/icon_kitchen.png',
-                            capacity: 2,
+                            capacity: recom.number_of_kitchens,
                             name: 'Kitchen',
                           ),
                           FacilityItem(
                             imageUrl: 'assets/icon_bedroom.png',
-                            capacity: 3,
+                            capacity: recom.number_of_bedrooms,
                             name: 'Bedroom',
                           ),
                           FacilityItem(
                             imageUrl: 'assets/icon_cupboard.png',
-                            capacity: 3,
+                            capacity: recom.number_of_cupboards,
                             name: 'Cupboard',
                           ),
                         ],
@@ -216,39 +220,53 @@ class DetailPage extends StatelessWidget {
                     SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
                       child: Row(
-                        children: [
-                          SizedBox(
-                            width: 24,
+                          children: recom.photos.map((item) {
+                        return Container(
+                          margin: EdgeInsets.symmetric(horizontal: 16),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(12),
+                            child: Image.network(
+                              item,
+                              width: 110,
+                              height: 88,
+                              fit: BoxFit.cover,
+                            ),
                           ),
-                          Image.asset(
-                            'assets/photo1.png',
-                            width: 110,
-                            height: 88,
-                            fit: BoxFit.cover,
+                        );
+                      }).toList()
+                          //       [
+                          //         SizedBox(
+                          //           width: 24,
+                          //         ),
+                          //         Image.asset(
+                          //           'assets/photo1.png',
+                          //           width: 110,
+                          //           height: 88,
+                          //           fit: BoxFit.cover,
+                          //         ),
+                          //         SizedBox(
+                          //           width: 18,
+                          //         ),
+                          //         Image.asset(
+                          //           'assets/photo2.png',
+                          //           width: 110,
+                          //           height: 88,
+                          //           fit: BoxFit.cover,
+                          //         ),
+                          //         SizedBox(
+                          //           width: 18,
+                          //         ),
+                          //         Image.asset(
+                          //           'assets/photo3.png',
+                          //           width: 110,
+                          //           height: 88,
+                          //           fit: BoxFit.cover,
+                          //         ),
+                          //         SizedBox(
+                          //           width: 24,
+                          //         ),
+                          //       ],
                           ),
-                          SizedBox(
-                            width: 18,
-                          ),
-                          Image.asset(
-                            'assets/photo2.png',
-                            width: 110,
-                            height: 88,
-                            fit: BoxFit.cover,
-                          ),
-                          SizedBox(
-                            width: 18,
-                          ),
-                          Image.asset(
-                            'assets/photo3.png',
-                            width: 110,
-                            height: 88,
-                            fit: BoxFit.cover,
-                          ),
-                          SizedBox(
-                            width: 24,
-                          ),
-                        ],
-                      ),
                     ),
                   ],
                 ),
@@ -274,7 +292,7 @@ class DetailPage extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Jln. Kappan Sukses No. 20 \n Palembang',
+                                '${recom.address} \n ${recom.city}, ${recom.country}',
                                 style: Locations,
                               ),
                             ],
@@ -284,12 +302,12 @@ class DetailPage extends StatelessWidget {
                               // launchUrl(
                               //     'https://goo.gl/maps/SyZx2yjWB1yR6AeH8');
 
-                              // launchUrl(widget.space.mapUrl);
+                              launchUrl(recom.map_url);
 
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: (context) => MapG()),
-                              );
+                              // Navigator.push(
+                              //   context,
+                              //   MaterialPageRoute(builder: (context) => MapG()),
+                              // );
                             },
                             child: Image.asset(
                               'assets/btn_map.png',
@@ -315,11 +333,11 @@ class DetailPage extends StatelessWidget {
                       ),
                     ),
                     onPressed: () {
-                      // launchUrl('https://wa.me/+6285156454374');
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => CallUser()),
-                      );
+                      launchUrl('tel:${recom.phone}');
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(builder: (context) => CallUser()),
+                      // );
                     },
                     child: Text(
                       'Book Now',
