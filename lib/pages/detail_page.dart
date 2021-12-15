@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:papa_kost/model/re_model.dart';
 import 'package:papa_kost/pages/error_page.dart';
+import 'package:papa_kost/pages/home_page.dart';
 import 'package:papa_kost/pages/map.dart';
 import 'package:papa_kost/pages/user.dart';
 import 'package:papa_kost/theme.dart';
@@ -45,7 +46,10 @@ class DetailPage extends StatelessWidget {
               children: [
                 InkWell(
                   onTap: () {
-                    Navigator.pop(context);
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => homepage()),
+                    );
                   },
                   child: Image.asset(
                     'assets/btn_back.png',
