@@ -28,8 +28,11 @@ class ReCard extends StatelessWidget {
               height: 110,
               child: Stack(
                 children: [
-                  Image.asset(
+                  Image.network(
                     recom.image_url,
+                    width: 130,
+                    height: 110,
+                    fit: BoxFit.cover,
                   ),
                   Align(
                     alignment: Alignment.topRight,
