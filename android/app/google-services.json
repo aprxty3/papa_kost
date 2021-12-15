@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "75367682549",
+    "project_id": "papa-kost",
+    "storage_bucket": "papa-kost.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:75367682549:android:9ab57bfea048d4bc0690bc",
+        "android_client_info": {
+          "package_name": "com.example.papa_kost"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "75367682549-osifcvukil1pasul27lv6v7i5bo1d949.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBW6TKRTHBwBz8kBiqjGoYNR_xp2q90iro"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "75367682549-osifcvukil1pasul27lv6v7i5bo1d949.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
