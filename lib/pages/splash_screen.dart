@@ -28,7 +28,7 @@ class SplashScreen extends StatelessWidget {
               height: 30,
             ),
             Text(
-              'Find Cozy House \nto Stay and Happy',
+              'Find your Cozy House \nto Stay and Happy \non Papa Kost',
               style: TopStyle,
             ),
             const SizedBox(
@@ -90,15 +90,17 @@ class SplashScreen extends StatelessWidget {
     }
 
     return Scaffold(
-      body: SafeArea(
-        bottom: false,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            header(),
-            explorebutton(),
-            footer(),
-          ],
+      body: SingleChildScrollView(
+        child: SafeArea(
+          bottom: false,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              header(),
+              explorebutton(),
+              footer(),
+            ],
+          ),
         ),
       ),
     );
