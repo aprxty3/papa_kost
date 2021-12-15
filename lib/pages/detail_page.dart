@@ -6,6 +6,7 @@ import 'package:papa_kost/pages/map.dart';
 import 'package:papa_kost/pages/user.dart';
 import 'package:papa_kost/theme.dart';
 import 'package:papa_kost/widget/facility.dart';
+import 'package:papa_kost/widget/rate.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class DetailPage extends StatelessWidget {
@@ -89,6 +90,7 @@ class DetailPage extends StatelessWidget {
                   padding: const EdgeInsets.only(
                     top: 30,
                     left: 24,
+                    right: 12,
                   ),
                   child: Column(
                     children: [
@@ -120,43 +122,16 @@ class DetailPage extends StatelessWidget {
                             ],
                           ),
                           Row(
-                            children: [
-                              Image.asset(
-                                'assets/icon_star.png',
-                                width: 20,
-                              ),
-                              SizedBox(
-                                width: 2,
-                              ),
-                              Image.asset(
-                                'assets/icon_star.png',
-                                width: 20,
-                              ),
-                              SizedBox(
-                                width: 2,
-                              ),
-                              Image.asset(
-                                'assets/icon_star.png',
-                                width: 20,
-                              ),
-                              SizedBox(
-                                width: 2,
-                              ),
-                              Image.asset(
-                                'assets/icon_star.png',
-                                width: 20,
-                              ),
-                              SizedBox(
-                                width: 2,
-                              ),
-                              Image.asset(
-                                'assets/icon_star_grey.png',
-                                width: 20,
-                              ),
-                              SizedBox(
-                                width: 24,
-                              ),
-                            ],
+                            children: [1, 2, 3, 4, 5].map((index) {
+                              return Container(
+                                // padding: EdgeInsets.only(left: 12),
+                                margin: EdgeInsets.only(right: 2),
+                                child: RateItem(
+                                  index: index,
+                                  rating: recom.rating,
+                                ),
+                              );
+                            }).toList(),
                           ),
                         ],
                       ),
