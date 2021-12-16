@@ -15,7 +15,7 @@ class TnG extends StatelessWidget {
           width: 80,
           height: 80,
         ),
-        SizedBox(
+      const  SizedBox(
           width: 16,
         ),
         Column(
@@ -25,7 +25,7 @@ class TnG extends StatelessWidget {
               tips.name,
               style: KostStyle,
             ),
-            SizedBox(
+          const  SizedBox(
               height: 4,
             ),
             Text(
@@ -34,10 +34,10 @@ class TnG extends StatelessWidget {
             ),
           ],
         ),
-        Spacer(),
+      const  Spacer(),
         IconButton(
           onPressed: () {},
-          icon: Icon(
+          icon:const Icon(
             Icons.chevron_right,
             color: Color(0xffC9C9C9),
           ),

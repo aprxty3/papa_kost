@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:papa_kost/model/re_model.dart';
 import 'package:papa_kost/pages/error_page.dart';
 import 'package:papa_kost/pages/home_page.dart';
-import 'package:papa_kost/pages/map.dart';
-import 'package:papa_kost/pages/user.dart';
+
 import 'package:papa_kost/theme.dart';
 import 'package:papa_kost/widget/facility.dart';
 import 'package:papa_kost/widget/rate.dart';
@@ -20,9 +19,12 @@ class DetailPage extends StatelessWidget {
       if (await canLaunch(url)) {
         launch(url);
       } else {
+        // throw (url);
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => ErrorPage()),
+          MaterialPageRoute(
+            builder: (context) => ErrorPage(),
+          ),
         );
       }
     }
@@ -76,12 +78,12 @@ class DetailPage extends StatelessWidget {
     Widget content() {
       return ListView(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 328,
           ),
           Container(
             width: MediaQuery.of(context).size.width,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               borderRadius: BorderRadius.vertical(
                 top: Radius.circular(20),
               ),
@@ -107,7 +109,7 @@ class DetailPage extends StatelessWidget {
                                 recom.name,
                                 style: BoardingName,
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 2,
                               ),
                               Text.rich(
@@ -128,7 +130,7 @@ class DetailPage extends StatelessWidget {
                             children: [1, 2, 3, 4, 5].map((index) {
                               return Container(
                                 // padding: EdgeInsets.only(left: 12),
-                                margin: EdgeInsets.only(right: 2),
+                                margin: const EdgeInsets.only(right: 2),
                                 child: RateItem(
                                   index: index,
                                   rating: recom.rating,
@@ -141,7 +143,7 @@ class DetailPage extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 Padding(
@@ -153,7 +155,7 @@ class DetailPage extends StatelessWidget {
                         'Main Facilities',
                         style: Facilities,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 15,
                       ),
                       Row(
@@ -179,7 +181,7 @@ class DetailPage extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 Column(
@@ -196,7 +198,7 @@ class DetailPage extends StatelessWidget {
                         ],
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 15,
                     ),
                     SingleChildScrollView(
@@ -204,7 +206,7 @@ class DetailPage extends StatelessWidget {
                       child: Row(
                           children: recom.photos.map((item) {
                         return Container(
-                          margin: EdgeInsets.symmetric(horizontal: 16),
+                          margin: const EdgeInsets.symmetric(horizontal: 16),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(12),
                             child: Image.network(
@@ -252,7 +254,7 @@ class DetailPage extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 Padding(
@@ -264,7 +266,7 @@ class DetailPage extends StatelessWidget {
                         'Location',
                         style: Facilities,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 6,
                       ),
                       Row(
@@ -301,7 +303,7 @@ class DetailPage extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 40,
                 ),
                 Container(
@@ -327,7 +329,7 @@ class DetailPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 40,
                 )
               ],

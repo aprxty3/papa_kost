@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
+
 import 'package:google_fonts/google_fonts.dart';
 
 //SPLASH
@@ -13,7 +13,7 @@ TextStyle TopStyle = GoogleFonts.poppins(
 TextStyle MedStyle = GoogleFonts.poppins(
   fontSize: 16,
   fontWeight: FontWeight.w300,
-  color: Color(0xff82868E),
+  color: const Color(0xff82868E),
 );
 
 TextStyle TBtStyle = GoogleFonts.poppins(
@@ -45,19 +45,19 @@ TextStyle KostStyle = GoogleFonts.poppins(
 TextStyle PriceStyle = GoogleFonts.poppins(
   fontSize: 16,
   fontWeight: FontWeight.w500,
-  color: Color(0xff5843BE),
+  color: const Color(0xff5843BE),
 );
 
 TextStyle MonthStyle = GoogleFonts.poppins(
   fontSize: 16,
   fontWeight: FontWeight.w300,
-  color: Color(0xff7A7E86),
+  color: const Color(0xff7A7E86),
 );
 
 TextStyle LocStyle = GoogleFonts.poppins(
   fontSize: 14,
   fontWeight: FontWeight.w300,
-  color: Color(0xff7A7E86),
+  color: const Color(0xff7A7E86),
 );
 
 TextStyle Rate = GoogleFonts.poppins(
@@ -82,19 +82,19 @@ TextStyle Facilities = GoogleFonts.poppins(
 TextStyle Facilities1 = GoogleFonts.poppins(
   fontSize: 14,
   fontWeight: FontWeight.w500,
-  color: Color(0xff5843BE),
+  color: const Color(0xff5843BE),
 );
 
 TextStyle Facilities2 = GoogleFonts.poppins(
   fontSize: 14,
   fontWeight: FontWeight.w300,
-  color: Color(0xff7A7E86),
+  color: const Color(0xff7A7E86),
 );
 
 TextStyle Locations = GoogleFonts.poppins(
   fontSize: 14,
   fontWeight: FontWeight.w400,
-  color: Color(0xff7A7E86),
+  color: const Color(0xff7A7E86),
 );
 
 //User Call
@@ -107,7 +107,7 @@ TextStyle Usercall = GoogleFonts.poppins(
 TextStyle Usercallminute = GoogleFonts.poppins(
   fontSize: 16,
   fontWeight: FontWeight.w300,
-  color: Color(0xff82868E),
+  color: const Color(0xff82868E),
 );
 
 //Error Page
@@ -120,5 +120,5 @@ TextStyle ErrorNot1 = GoogleFonts.poppins(
 TextStyle ErrorNot2 = GoogleFonts.poppins(
   fontSize: 16,
   fontWeight: FontWeight.w300,
-  color: Color(0xff82868E),
+  color: const Color(0xff82868E),
 );

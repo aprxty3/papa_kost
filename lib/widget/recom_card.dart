@@ -39,7 +39,7 @@ class ReCard extends StatelessWidget {
                     child: Container(
                       width: 70,
                       height: 30,
-                      decoration: BoxDecoration(
+                      decoration:const BoxDecoration(
                         color: Color(0xff5843BE),
                         borderRadius: BorderRadius.only(
                           bottomLeft: Radius.circular(30),
@@ -67,7 +67,7 @@ class ReCard extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(
+        const  SizedBox(
             width: 20,
           ),
           Column(
@@ -77,7 +77,7 @@ class ReCard extends StatelessWidget {
                 recom.name,
                 style: KostStyle,
               ),
-              SizedBox(
+           const   SizedBox(
                 height: 2,
               ),
               Text.rich(
@@ -92,7 +92,7 @@ class ReCard extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
+           const   SizedBox(
                 height: 16,
               ),
               Text(

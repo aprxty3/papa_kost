@@ -13,7 +13,7 @@ class BotItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Spacer(),
+       const Spacer(),
         IconButton(
           onPressed: () {},
           icon: Image.asset(
@@ -22,12 +22,12 @@ class BotItem extends StatelessWidget {
             height: 26,
           ),
         ),
-        Spacer(),
+      const  Spacer(),
         isActive
             ? Container(
                 width: 30,
                 height: 4,
-                decoration: BoxDecoration(
+                decoration:const BoxDecoration(
                   color: Color(0xff7F74EB),
                   borderRadius: BorderRadius.vertical(
                     top: Radius.circular(1000),

@@ -14,21 +14,21 @@ class CallUser extends StatelessWidget {
                 'assets/pic.png',
                 width: 150,
               ),
-              SizedBox(
+             const SizedBox(
                 height: 65,
               ),
               Text(
                 'Amanda Shayna',
                 style: Usercall,
               ),
-              SizedBox(
+             const SizedBox(
                 height: 6,
               ),
               Text(
                 '12 : 30 minutes',
                 style: Usercallminute,
               ),
-              SizedBox(
+             const SizedBox(
                 height: 60,
               ),
               IconButton(

@@ -16,14 +16,14 @@ class ErrorPage extends StatelessWidget {
                 width: 300,
                 height: 86,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 70,
               ),
               Text(
                 'Where are you going?',
                 style: ErrorNot1,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
               Text(
@@ -31,7 +31,7 @@ class ErrorPage extends StatelessWidget {
                 textAlign: TextAlign.center,
                 style: ErrorNot2,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
               InkWell(

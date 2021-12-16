@@ -31,7 +31,7 @@ class KoCart extends StatelessWidget {
                         child: Container(
                           width: 50,
                           height: 30,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             color: Color(0xff5843BE),
                             borderRadius: BorderRadius.only(
                               bottomLeft: Radius.circular(30),
