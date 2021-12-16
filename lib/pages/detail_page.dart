@@ -36,6 +36,39 @@ class _DetailPageState extends State<DetailPage> {
       }
     }
 
+    Future<void> showConfirmation() async {
+      return showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            title: const Text('Confirmation'),
+            content: SingleChildScrollView(
+              child: ListBody(
+                children: const <Widget>[
+                  Text('Apakah kamu ingin menelpon pemilik kos?'),
+                ],
+              ),
+            ),
+            actions: <Widget>[
+              TextButton(
+                child: const Text('Batal'),
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+              ),
+              TextButton(
+                child: const Text('Telpon'),
+                onPressed: () {
+                  Navigator.of(context).pop();
+                  launchUrl('tel:${widget.recom.phone}');
+                },
+              ),
+            ],
+          );
+        },
+      );
+    }
+
     Widget header() {
       return Stack(
         children: [
@@ -331,7 +364,7 @@ class _DetailPageState extends State<DetailPage> {
                       ),
                     ),
                     onPressed: () {
-                      launchUrl('tel:${widget.recom.phone}');
+                      showConfirmation();
                       // Navigator.push(
                       //   context,
                       //   MaterialPageRoute(builder: (context) => CallUser()),
