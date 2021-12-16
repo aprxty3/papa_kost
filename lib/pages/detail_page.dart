@@ -8,10 +8,17 @@ import 'package:papa_kost/widget/facility.dart';
 import 'package:papa_kost/widget/rate.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class DetailPage extends StatelessWidget {
+class DetailPage extends StatefulWidget {
   final Recom recom;
 
   DetailPage(this.recom);
+
+  @override
+  State<DetailPage> createState() => _DetailPageState();
+}
+
+class _DetailPageState extends State<DetailPage> {
+  bool isClicked = false;
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +40,7 @@ class DetailPage extends StatelessWidget {
       return Stack(
         children: [
           Image.network(
-            recom.image_url,
+            widget.recom.image_url,
             width: MediaQuery.of(context).size.width,
             height: 350,
             fit: BoxFit.cover,
@@ -44,31 +51,38 @@ class DetailPage extends StatelessWidget {
 
     Widget button() {
       return Padding(
-        padding: const EdgeInsets.only(
-          top: 20,
-          left: 24,
-          right: 24,
+        padding: EdgeInsets.symmetric(
+          horizontal: 20,
+          vertical: 30,
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             InkWell(
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => homepage()),
-                );
+                Navigator.pop(context);
               },
               child: Image.asset(
                 'assets/btn_back.png',
                 width: 40,
-                height: 40,
               ),
             ),
-            Image.asset(
-              'assets/btn_wishlist.png',
-              width: 40,
-              height: 40,
+            // Image.asset(
+            //   'assets/btn_wishlist.png',
+            //   width: 40,
+            // ),
+            InkWell(
+              onTap: () {
+                setState(() {
+                  isClicked = !isClicked;
+                });
+              },
+              child: Image.asset(
+                isClicked
+                    ? 'assets/btn_wishlist_active.png'
+                    : 'assets/btn_wishlist.png',
+                width: 40,
+              ),
             ),
           ],
         ),
@@ -106,7 +120,7 @@ class DetailPage extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                recom.name,
+                                widget.recom.name,
                                 style: BoardingName,
                               ),
                               const SizedBox(
@@ -114,7 +128,7 @@ class DetailPage extends StatelessWidget {
                               ),
                               Text.rich(
                                 TextSpan(
-                                  text: '\$${recom.price}',
+                                  text: '\$${widget.recom.price}',
                                   style: PriceStyle,
                                   children: [
                                     TextSpan(
@@ -133,7 +147,7 @@ class DetailPage extends StatelessWidget {
                                 margin: const EdgeInsets.only(right: 2),
                                 child: RateItem(
                                   index: index,
-                                  rating: recom.rating,
+                                  rating: widget.recom.rating,
                                 ),
                               );
                             }).toList(),
@@ -163,17 +177,17 @@ class DetailPage extends StatelessWidget {
                         children: [
                           FacilityItem(
                             imageUrl: 'assets/icon_kitchen.png',
-                            capacity: recom.number_of_kitchens,
+                            capacity: widget.recom.number_of_kitchens,
                             name: 'Kitchen',
                           ),
                           FacilityItem(
                             imageUrl: 'assets/icon_bedroom.png',
-                            capacity: recom.number_of_bedrooms,
+                            capacity: widget.recom.number_of_bedrooms,
                             name: 'Bedroom',
                           ),
                           FacilityItem(
                             imageUrl: 'assets/icon_cupboard.png',
-                            capacity: recom.number_of_cupboards,
+                            capacity: widget.recom.number_of_cupboards,
                             name: 'Cupboard',
                           ),
                         ],
@@ -204,7 +218,7 @@ class DetailPage extends StatelessWidget {
                     SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
                       child: Row(
-                          children: recom.photos.map((item) {
+                          children: widget.recom.photos.map((item) {
                         return Container(
                           margin: const EdgeInsets.symmetric(horizontal: 16),
                           child: ClipRRect(
@@ -276,7 +290,7 @@ class DetailPage extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                '${recom.address} \n ${recom.city}, ${recom.country}',
+                                '${widget.recom.address} \n ${widget.recom.city}, ${widget.recom.country}',
                                 style: Locations,
                               ),
                             ],
@@ -286,7 +300,7 @@ class DetailPage extends StatelessWidget {
                               // launchUrl(
                               //     'https://goo.gl/maps/SyZx2yjWB1yR6AeH8');
 
-                              launchUrl(recom.map_url);
+                              launchUrl(widget.recom.map_url);
 
                               // Navigator.push(
                               //   context,
@@ -317,7 +331,7 @@ class DetailPage extends StatelessWidget {
                       ),
                     ),
                     onPressed: () {
-                      launchUrl('tel:${recom.phone}');
+                      launchUrl('tel:${widget.recom.phone}');
                       // Navigator.push(
                       //   context,
                       //   MaterialPageRoute(builder: (context) => CallUser()),
@@ -344,8 +358,8 @@ class DetailPage extends StatelessWidget {
         child: Stack(
           children: [
             header(),
-            button(),
             content(),
+            button(),
           ],
         ),
       ),
