@@ -28,7 +28,7 @@ class homepage extends StatelessWidget {
               'Explore Now',
               style: TopStyle,
             ),
-            SizedBox(
+            const SizedBox(
               height: 2,
             ),
             Text(
@@ -44,7 +44,7 @@ class homepage extends StatelessWidget {
       return Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
           Padding(
@@ -56,7 +56,7 @@ class homepage extends StatelessWidget {
               style: RTTGStyle,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 16,
           ),
           Container(
@@ -64,7 +64,7 @@ class homepage extends StatelessWidget {
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: [
-                SizedBox(
+                const SizedBox(
                   width: 24,
                 ),
                 KoCart(
@@ -74,7 +74,7 @@ class homepage extends StatelessWidget {
                     imageUrl: 'assets/city1.png',
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 20,
                 ),
                 KoCart(
@@ -85,7 +85,7 @@ class homepage extends StatelessWidget {
                     isPopuler: true,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 20,
                 ),
                 KoCart(
@@ -95,7 +95,38 @@ class homepage extends StatelessWidget {
                     imageUrl: 'assets/city3.png',
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
+                  width: 24,
+                ),
+                KoCart(
+                  Kota(
+                    // id: 3,
+                    name: 'Palembang',
+                    imageUrl: 'assets/city4.png',
+                  ),
+                ),
+                const SizedBox(
+                  width: 24,
+                ),
+                KoCart(
+                  Kota(
+                    // id: 3,
+                    name: 'Aceh',
+                    imageUrl: 'assets/city5.png',
+                    isPopuler: true,
+                  ),
+                ),
+                const SizedBox(
+                  width: 24,
+                ),
+                KoCart(
+                  Kota(
+                    // id: 3,
+                    name: 'Bogor',
+                    imageUrl: 'assets/city6.png',
+                  ),
+                ),
+                const SizedBox(
                   width: 24,
                 ),
               ],
@@ -172,7 +203,7 @@ class homepage extends StatelessWidget {
                 //],
               );
             }
-            return Center(
+            return const Center(
               child: CircularProgressIndicator(),
             );
           },
@@ -194,7 +225,7 @@ class homepage extends StatelessWidget {
               'Tips & Guidance',
               style: RTTGStyle,
             ),
-            SizedBox(
+            const SizedBox(
               height: 16,
             ),
             TnG(
@@ -204,7 +235,7 @@ class homepage extends StatelessWidget {
                 date: 'Updated 20 Apr',
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             TnG(
@@ -214,7 +245,7 @@ class homepage extends StatelessWidget {
                 date: 'Updated 11 Dec',
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 50,
             )
           ],
@@ -229,7 +260,7 @@ class homepage extends StatelessWidget {
           width: 320,
           height: 65,
           decoration: BoxDecoration(
-            color: Color(0xffF6F7F8),
+            color: const Color(0xffF6F7F8),
             borderRadius: BorderRadius.circular(23),
           ),
           child: Row(
@@ -267,7 +298,7 @@ class homepage extends StatelessWidget {
               popularCity(),
               recom(),
               tng(),
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
             ],
