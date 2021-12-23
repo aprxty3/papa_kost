@@ -1,6 +1,7 @@
 # papa_kost
 
-An apps project to looking for boarding house
+An apps project to looking for boarding house. 
+for demo/testing, you can go to : https://drive.google.com/drive/u/3/folders/18kEB94qw0TGaw_04AaW4Mn7VPyyy14HS
 
 ## Figma Design
 https://www.figma.com/file/jfCEShvyyi5sFXSioSA0Dl/Cozy-%5BFull-Edition%5D-Update?node-id=153%3A282
